@@ -1,0 +1,15 @@
+<p>
+	<a href="#/">Back To Search</a>
+</p>
+<p>
+	Forecast for {{ city }}
+</p>
+
+Days : <a href="#/forecast/2" >2</a> | <a href="#/forecast/4" >4</a> | <a href="#/forecast/5" >5</a> 
+<div ng-repeat="w in weatherResult.list">
+	<div class="row">
+		<div class="col-md-12">
+			<weather-report weather-day="w" convert-to-standard="convertToFahrenheit(daytimeTemp)" convert-to-standard-date="convertToDate(dt)" date-format ="MMM 	d, y"></weather-report>
+		</div>
+	</div>
+</div>
